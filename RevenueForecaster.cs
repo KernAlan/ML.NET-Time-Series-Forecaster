@@ -10,7 +10,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 
-namespace BT.Forecaster {
+namespace SSAForecaster {
 	public class RevenueForecaster {
 		/// <summary>
 		/// How many "periods" you want to predict for. If you're intaking days and want to output for a year, horizon would be 365
@@ -33,8 +33,7 @@ namespace BT.Forecaster {
 		/// </summary>
 		public float ConfidenceLevel { get; set; }
 
-		public RevenueForecaster(long tenantId, int timeHorizonDesired, int windowSize, int seriesLength, int trainSize, float confidenceLevel) {
-			TenantId = tenantId;
+		public RevenueForecaster(int timeHorizonDesired, int windowSize, int seriesLength, int trainSize, float confidenceLevel) {
 			TimeHorizonDesired = timeHorizonDesired;
 			WindowSize = windowSize;
 			SeriesLength = seriesLength;

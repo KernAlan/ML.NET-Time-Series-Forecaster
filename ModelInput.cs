@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BT.Forecaster {
 	public class ModelInput {
-		public DateTime InvoiceDt { get; set; }
+		public DateTime Month { get; set; }
 
 		public float Year { get; set; }
 
